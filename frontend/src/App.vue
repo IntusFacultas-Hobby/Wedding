@@ -1,12 +1,15 @@
 <template>
   <theme-provider id="app" :theme="theme">
-    <MainPage></MainPage>
+    <LandingPage />
+    <Delayed />
+    <!-- <MainPage></MainPage> -->
   </theme-provider>
 </template>
 
 <script>
-// import LandingPage from "./views/LandingPage";
-import MainPage from "./views/MainPage";
+import LandingPage from "./views/LandingPage";
+import Delayed from "./components/Delayed";
+// import MainPage from "./views/MainPage";
 
 import { ThemeProvider } from "vue-styled-components";
 import { THEME } from "./configuration";
@@ -19,7 +22,9 @@ export default {
   },
   mounted() {},
   components: {
-    MainPage,
+    // MainPage,
+    Delayed,
+    LandingPage,
     ThemeProvider,
   },
 };
@@ -69,16 +74,5 @@ h6 {
   background-color: #6c757d;
   border-radius: 5px;
   border: 3px solid white;
-}
-@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
-  html {
-    transform: rotate(-90deg);
-    transform-origin: left top;
-    width: 100vh;
-    overflow-x: hidden;
-    position: absolute;
-    top: 100%;
-    left: 0;
-  }
 }
 </style>
