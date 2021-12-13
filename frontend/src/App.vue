@@ -1,7 +1,5 @@
 <template>
   <theme-provider id="app" :theme="theme">
-    <!-- <LandingPage />
-    <Delayed /> -->
     <MainPage></MainPage>
   </theme-provider>
 </template>
@@ -10,7 +8,7 @@
 // import LandingPage from "./views/LandingPage";
 // import Delayed from "./components/Delayed";
 import { ThemeProvider } from 'vue-styled-components';
-import MainPage from './views/MainPage';
+import MainPage from './views/MainPage.vue';
 
 import { THEME } from './configuration';
 
@@ -53,7 +51,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Trajan Pro 3" !important ;
+  font-family: 'Trajan Pro 3' !important ;
   margin-block-end: 0;
   margin-bottom: 0 !important;
 }
