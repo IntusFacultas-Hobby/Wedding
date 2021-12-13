@@ -1,7 +1,7 @@
 <template>
   <FlexRow>
     <FlexColumn :md="12" :col="6" class="accomodation__mapcontainer">
-      <div v-if="show" v-html="hotel.map"></div>
+      <iframe v-if="show" :src="hotel.src" v-bind="iframeProps" />
       <div class="maploading" v-else></div>
     </FlexColumn>
     <FlexColumn :md="12" :col="6" class="accomodation__details">
@@ -36,7 +36,9 @@
           <rect fill="none" height="50" width="50" />
           <polygon
             fill="gold"
-            points="25,3.553 30.695,18.321 46.5,19.173 34.214,29.152 38.287,44.447 25,35.848 11.712,44.447 15.786,29.152 3.5,19.173 19.305,18.321 "
+            points="
+              25,3.553 30.695,18.321 46.5,19.173 34.214,29.152 38.287,44.447 25,35.848
+              11.712,44.447 15.786,29.152 3.5,19.173 19.305,18.321 "
             stroke="gold"
             stroke-miterlimit="10"
             stroke-width="2"
@@ -52,6 +54,18 @@ import { FlexColumn, FlexRow } from '@IntusFacultas/layout';
 
 import { CategoryTitle, Paragraph, TextContent } from '@IntusFacultas/typography';
 
+const IFRAME_WIDTH = 400;
+const IFRAME_HEIGHT = 300;
+const iframeProps = {
+  class: 'detailssection__map',
+  width: IFRAME_WIDTH,
+  height: IFRAME_HEIGHT,
+  frameborder: '0',
+  style: 'border:0;',
+  allowfullscreen: '',
+  'aria-hidden': 'false',
+  tabindex: 0,
+};
 export const Hotel = {
   components: {
     CategoryTitle,
@@ -63,6 +77,7 @@ export const Hotel = {
   data() {
     return {
       show: false,
+      iframeProps,
     };
   },
   mounted() {
@@ -114,7 +129,7 @@ export default Hotel;
 }
 .maploading {
   width: 400px;
-  height: 400px;
+  height: 300px;
   position: relative;
   background-color: #444;
   color: white;
