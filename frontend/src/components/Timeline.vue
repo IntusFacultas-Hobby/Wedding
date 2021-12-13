@@ -1,19 +1,13 @@
 <template>
-  <TimelineContainer :timeline-flavor="timelineFlavor" :timeline-color="timelineColor" :width="width">
+  <TimelineContainer :width="width">
     <TimelineSection
       v-for="(item, index) in items"
       :key="index"
-      :item-color="item.color ? item.color : defaultItemColor"
-      :item-flavor="item.flavor ? item.flavor : defaultItemFlavor"
-      :circle-color="item.circleColor ? item.circleColor : defaultCircleColor"
-      :circle-flavor="item.circleFlavor ? item.circleFlavor : defaultCircleFlavor"
-      :circle-customization="item.circleCustomization"
-      :left="index % 2 == 0"
+      :backgroundColor="item.backgroundColor"
+      :logoColor="item.logoColor"
+      :circleCustomization="item.circleCustomization"
     >
-      <TimelineContent
-        :item-color="item.color ? item.color : defaultItemColor"
-        :item-flavor="item.flavor ? item.flavor : defaultItemFlavor"
-      >
+      <TimelineContent>
         <div v-html="item.content" />
       </TimelineContent>
     </TimelineSection>
@@ -30,12 +24,6 @@ export const Timeline = {
     TimelineContent,
   },
   props: {
-    defaultItemColor: String,
-    defaultItemFlavor: { type: String, default: 'Light' },
-    defaultCircleFlavor: { type: String, default: 'Secondary' },
-    defaultCircleColor: String,
-    timelineFlavor: { type: String, default: 'Secondary' },
-    timelineColor: String,
     width: { type: String, default: '1200px' },
     items: Array,
   },

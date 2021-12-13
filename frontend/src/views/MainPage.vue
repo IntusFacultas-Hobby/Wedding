@@ -69,11 +69,11 @@ import '../assets/fonts/fonts.css';
 import { PageTitle, Paragraph } from '@IntusFacultas/typography';
 import Navbar from '../components/Navbar.vue';
 import ScrollIndicator from '../components/ScrollIndicator.vue';
-import picture1 from '../assets/picture1.png';
-import picture2 from '../assets/picture2.png';
-import picture4 from '../assets/picture4.jpg';
-import picture5 from '../assets/picture5.jpg';
-import picture6 from '../assets/picture6.jpg';
+import picture1 from '../assets/picture1.webp';
+import picture2 from '../assets/picture2.webp';
+import picture4 from '../assets/picture4.webp';
+import picture5 from '../assets/picture5.webp';
+import picture6 from '../assets/picture6.webp';
 import OurStory from '../components/OurStory.vue';
 import Travel from '../components/Travel.vue';
 import Accomodation from '../components/Accomodation.vue';
@@ -110,16 +110,16 @@ export const MainPage = {
       picture1Formatting: css`
         background-position: center center;
         @media screen and (min-width: 1700px) {
-          background-position: center -200px;
+          background-position: center 0;
         }
         @media screen and (min-width: 1820px) {
-          background-position: center -250px;
+          background-position: center 0;
         }
         @media screen and (min-width: 1900px) {
-          background-position: center -280px;
+          background-position: center 0;
         }
         @media screen and (min-width: 2100px) {
-          background-position: center -310px;
+          background-position: center 0px;
         }
         @media screen and (max-width: 450px) {
           background-position: 40% center;
@@ -152,7 +152,7 @@ export const MainPage = {
       `,
       picture5,
       picture5Formatting: css`
-        background-position: center -260px;
+        background-position: center 0px;
         @media screen and (max-width: 500px) {
           background-position: center 0px;
         }

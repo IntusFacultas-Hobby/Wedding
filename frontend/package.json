@@ -16,6 +16,7 @@
     "@IntusFacultas/raw-navbar": "^1.0.16",
     "@IntusFacultas/typography": "^2.1.6",
     "axios": "^0.19.2",
+    "color": "^4.1.0",
     "core-js": "^3.6.5",
     "smooth-scrollbar": "^8.5.2",
     "vue": "^2.6.11",

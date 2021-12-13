@@ -111,13 +111,13 @@ import {
 import { FlexRow, FlexColumn } from '@IntusFacultas/layout';
 import { List, ListItem } from '@IntusFacultas/list';
 // Images
-import chickensatay from '../assets/chicken-satay.jpg';
-import tequeno from '../assets/tequenos.png';
-import potsticker from '../assets/edamame_potstickers.jpg';
-import toast from '../assets/spicy-tuna-tartare-avocado-toast.jpg';
-import rijsttafel from '../assets/rijsttafel.jpeg';
-import seafood from '../assets/seafood-birds.jpg';
-import empanadas from '../assets/steak and empanadas.png';
+import chickensatay from '../assets/chicken-satay.webp';
+import tequeno from '../assets/tequenos.webp';
+import potsticker from '../assets/edamame_potstickers.webp';
+import toast from '../assets/spicy-tuna-tartare-avocado-toast.webp';
+import rijsttafel from '../assets/rijsttafel.webp';
+import seafood from '../assets/seafood-birds.webp';
+import empanadas from '../assets/steak and empanadas.webp';
 
 export const Menu = {
   data() {
