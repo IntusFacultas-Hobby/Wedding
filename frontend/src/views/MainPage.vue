@@ -155,6 +155,7 @@ export const MainPage = {
         background-position: center 0px;
         @media screen and (max-width: 500px) {
           background-position: center 0px;
+          background-attachment: scroll;
         }
         @media screen and (max-height: 450px) {
           background-position: center -160px;
