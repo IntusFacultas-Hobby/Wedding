@@ -1,25 +1,23 @@
 <template>
-  <raw-navbar class="navbar" flavor="Navbar" :title="title" :fixed="true">
-    <navbar-content></navbar-content>
-    <navbar-content>
-      <navbar-item>
+  <RawNavbar class="navbar" flavor="Navbar" :title="title" :fixed="true">
+    <NavbarContent />
+    <NavbarContent>
+      <NavbarItem>
         <a href="#details">Details</a>
-      </navbar-item>
-      <navbar-item>
-        <a href="#">Registry</a>
-      </navbar-item>
-      <navbar-item class="navbar__rsvpbuttoncontainer">
-        <n-button class="navbar__rsvpbutton" flavor="Secondary" :outline="true">RSVP</n-button>
-      </navbar-item>
-    </navbar-content>
-  </raw-navbar>
+      </NavbarItem>
+      <NavbarItem>
+        <a href="https://www.zola.com/registry/pedroandapril2022" target="_blank">Registry</a>
+      </NavbarItem>
+    </NavbarContent>
+  </RawNavbar>
 </template>
 
 <script>
-import RawNavbar from "@IntusFacultas/raw-navbar/src/RawNavbar";
-import { NavbarContent, NavbarItem } from "@IntusFacultas/navbar/src/Navbar";
-import Logo from "../assets/Wedding Logo.svg";
-import { NButton } from "@IntusFacultas/button";
+import RawNavbar from '@IntusFacultas/raw-navbar/src/RawNavbar.vue';
+import { NavbarContent, NavbarItem } from '@IntusFacultas/navbar/src/Navbar.vue';
+import { NButton } from '@IntusFacultas/button';
+import Logo from '../assets/Wedding Logo.svg';
+
 export const Navbar = {
   components: {
     RawNavbar,
@@ -30,9 +28,13 @@ export const Navbar = {
   data() {
     return {
       title: {
-        html: `<img class="navbar__brandicon" src="${process.env.VUE_APP_STATIC_URL}${Logo}" alt="April and Pedro's initials"></img>`,
-        url: "#",
-        text: "",
+        html: `<img 
+          class="navbar__brandicon" 
+          src="${process.env.VUE_APP_STATIC_URL}${Logo}" 
+          alt="April and Pedro's initials">
+        </img>`,
+        url: '#',
+        text: '',
       },
     };
   },
@@ -52,16 +54,11 @@ export default Navbar;
   color: initial !important;
   height: 40px;
   text-align: center;
-  /* width: 70px; */
-
-  /* margin: 5px 5px; */
 }
 @media screen and (max-width: 460px) {
   .navbar__rsvpbutton {
     line-height: 1.5;
     display: block;
-    /* width: 100%; */
-    /* margin: 5px 0; */
   }
 }
 .navbar__rsvpbutton:hover {

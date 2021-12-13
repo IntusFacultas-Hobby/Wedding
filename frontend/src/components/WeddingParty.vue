@@ -1,9 +1,9 @@
 <template>
   <div class="detailssection">
-    <section-title id="weddingparty" class="detailssection__title">Wedding Party</section-title>
-    <flex-row>
-      <flex-column class="weddingparty__container" :sm="12">
-        <section-title class="weddingparty__container__title">Officiant</section-title>
+    <SectionTitle id="weddingparty" class="detailssection__title">Wedding Party</SectionTitle>
+    <FlexRow>
+      <FlexColumn class="weddingparty__container" :sm="12">
+        <SectionTitle class="weddingparty__container__title">Officiant</SectionTitle>
         <div class="weddingparty__container__item">
           <img
             class="weddingparty__container__item__image"
@@ -11,19 +11,22 @@
             alt="Picture of Adithya, the man of honor"
           />
           <div class="weddingparty__container__item__text">
-            <paragraph bold>Patrick Giblin</paragraph>
-            <paragraph>Patrick Giblin is a close friend of Pedro's. He was Pedro's DARE officer in Junior High School, and shared a special relationship both with Pedro, and Pedro's Sensei.</paragraph>
+            <Paragraph bold>Patrick Giblin</Paragraph>
+            <Paragraph>
+              Patrick Giblin is a close friend of Pedro's. He was Pedro's DARE officer in Junior High School, and shared
+              a special relationship both with Pedro, and Pedro's Sensei.
+            </Paragraph>
           </div>
         </div>
-      </flex-column>
-    </flex-row>
-    <flex-row>
-      <flex-column :md="6" :sm="12" class="weddingparty__container">
-        <section-title class="weddingparty__container__title">
+      </FlexColumn>
+    </FlexRow>
+    <FlexRow>
+      <FlexColumn :md="6" :sm="12" class="weddingparty__container">
+        <SectionTitle class="weddingparty__container__title">
           Bridesmaids
           <span class="fancyampersand fancyampersand--big">&amp;</span>
           Bridesguards
-        </section-title>
+        </SectionTitle>
         <div class="weddingparty__container__item">
           <img
             class="weddingparty__container__item__image"
@@ -31,9 +34,13 @@
             alt="Picture of Adithya, the man of honor"
           />
           <div class="weddingparty__container__item__text">
-            <sub-section-title>Man of Honor</sub-section-title>
-            <paragraph bold>Adithya Batachar</paragraph>
-            <paragraph>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, est minus natus exercitationem corrupti voluptas molestias velit eligendi officia veritatis beatae expedita temporibus dolores, provident iste facere ipsam, voluptate culpa?</paragraph>
+            <SubSectionTitle>Man of Honor</SubSectionTitle>
+            <Paragraph bold>Adithya Bhattachar</Paragraph>
+            <Paragraph>
+              April and Adithya met in a Purdue calculus class and bonded over their mutual love of food, similar senses
+              of humor, and dreams of surviving their engineering degrees. A decade and a few engineering degrees later,
+              he is still a valued expert on food, bread baking, traveling, and celebrating life.
+            </Paragraph>
           </div>
         </div>
         <div class="weddingparty__container__item">
@@ -43,18 +50,22 @@
             alt="Picture of Katie, the bridesmaid"
           />
           <div class="weddingparty__container__item__text">
-            <sub-section-title>Bridesmaid</sub-section-title>
-            <paragraph bold>Katie Thompson</paragraph>
-            <paragraph>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, deleniti eaque? Cumque, eius saepe. Beatae nesciunt quis autem ad numquam totam dolores, tenetur placeat molestias est voluptas quas cumque sint.</paragraph>
+            <SubSectionTitle>Bridesmaid</SubSectionTitle>
+            <Paragraph bold>Katie Thompson</Paragraph>
+            <Paragraph
+              >April and Katie are mutually each others cheerleaders and have been since meeting on the Purdue
+              collegiate ballroom team. She is an amazing artist (on and off the dance floor) that brings so much color
+              and joy to their friendship.
+            </Paragraph>
           </div>
         </div>
-      </flex-column>
-      <flex-column :md="6" :sm="12" class="weddingparty__container">
-        <section-title class="weddingparty__container__title">
+      </FlexColumn>
+      <FlexColumn :md="6" :sm="12" class="weddingparty__container">
+        <SectionTitle class="weddingparty__container__title">
           Groomsmen
           <span class="fancyampersand fancyampersand--big">&amp;</span>
           Groomsmaids
-        </section-title>
+        </SectionTitle>
         <div class="weddingparty__container__item">
           <img
             class="weddingparty__container__item__image"
@@ -62,9 +73,15 @@
             alt="Picture of Nathan, the best man"
           />
           <div class="weddingparty__container__item__text">
-            <sub-section-title>Best Man</sub-section-title>
-            <paragraph bold>Nathan Whitney</paragraph>
-            <paragraph>Pedro and Nathan have been best friends since the 5th grade, and find common ground in throwing each other violently left, right and center.</paragraph>
+            <SubSectionTitle>Best Man</SubSectionTitle>
+            <Paragraph bold>Nathan Whitney</Paragraph>
+            <Paragraph>
+              Pedro and Nathan have been best friends since the 5th grade, and find common ground in the
+              <a href="https://pbs.twimg.com/media/EWrLpSvXgAA9uk5.png" target="_blank">
+                gentle art of involuntary yoga
+              </a>
+              , as well as coffee, video games, and poodles.
+            </Paragraph>
           </div>
         </div>
         <div class="weddingparty__container__item">
@@ -74,9 +91,12 @@
             alt="Picture of Luis, the best man"
           />
           <div class="weddingparty__container__item__text">
-            <sub-section-title>Best Man</sub-section-title>
-            <paragraph bold>Luis Del Moral Lopez</paragraph>
-            <paragraph>Luis is Pedro's brother. Nuff said.</paragraph>
+            <SubSectionTitle>Best Man</SubSectionTitle>
+            <Paragraph bold>Luis Del Moral Lopez</Paragraph>
+            <Paragraph>
+              Luis is Pedro's younger brother. He's Pedro's resident meme supplier, as well as gaming buddy. He's
+              Pedro's guide into what the kids these days are doing.
+            </Paragraph>
           </div>
         </div>
         <div class="weddingparty__container__item">
@@ -86,29 +106,30 @@
             alt="Picture of Dasha, the groomsmaid"
           />
           <div class="weddingparty__container__item__text">
-            <sub-section-title>Groomsmaid</sub-section-title>
-            <paragraph bold>Dasha Beniash</paragraph>
-            <paragraph>Dasha and Pedro have been fast friends ever since Dasha's first day at Karate, where he rather rudely beat her up in front of her dad (much to his approval). Since then, they have been each other's trusted confidants.</paragraph>
+            <SubSectionTitle>Groomsmaid</SubSectionTitle>
+            <Paragraph bold>Dasha Beniash</Paragraph>
+            <Paragraph>
+              Dasha and Pedro have been fast friends ever since Dasha's first day at karate. Since then, they have been
+              each other's trusted confidants. Dasha was the person who inspired Pedro to join ballroom, where he would
+              eventually meet April.
+            </Paragraph>
           </div>
         </div>
-      </flex-column>
-    </flex-row>
+      </FlexColumn>
+    </FlexRow>
   </div>
 </template>
 
 <script>
-import {
-  SectionTitle,
-  SubSectionTitle,
-  Paragraph,
-} from "@IntusFacultas/typography";
-import { FlexRow, FlexColumn } from "@IntusFacultas/layout";
-import adithya from "../assets/adithya.jpg";
-import katie from "../assets/katie.png";
-import nathan from "../assets/nathan.jpg";
-import dasha from "../assets/dasha.jpg";
-import luis from "../assets/luis.jpg";
-import dpg from "../assets/luis.jpg";
+import { SectionTitle, SubSectionTitle, Paragraph } from '@IntusFacultas/typography';
+import { FlexRow, FlexColumn } from '@IntusFacultas/layout';
+import adithya from '../assets/adithya.jpg';
+import katie from '../assets/katie.png';
+import nathan from '../assets/nathan.jpg';
+import dasha from '../assets/dasha.jpg';
+import luis from '../assets/luis.jpg';
+import dpg from '../assets/dpg.jpg';
+
 export const WeddingParty = {
   data() {
     return {

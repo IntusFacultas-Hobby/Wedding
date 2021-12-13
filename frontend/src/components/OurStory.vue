@@ -1,60 +1,48 @@
 <template>
-  <flex-row class="ourstory">
-    <flex-column :md="12" :col="1" class="ourstory__titlearea">
-      <section-title>Our Story</section-title>
-    </flex-column>
-    <flex-column :md="12" :col="1" class="ourstory__paragraphs">
-      <paragraph>
-        We met each other for the first time on the Purdue Latin &amp;
-        Ballroom Dance Team.
-      </paragraph>
-      <paragraph>
-        We both were bright-eyed bushy-tailed newcomers, just desperately
-        trying to stay on time to quickstep, when we ran into each other
-        (not literally) during practice, the day before Valentine's day.
-      </paragraph>
-      <paragraph>
-        Since we were both single at the time, we figured "Hey, no one will
-        be using the practice space, let's practice together!" Pedro
-        suggested turning the practice into practice and a dinner, and to
-        this day, April maintains she didn't realize that it was meant to be
-        a date.
-      </paragraph>
-      <paragraph>
-        That night, we went to 9 Irish Brothers in West Lafayette, and
-        talked until closing time (quite a feat for a bar known for late
-        closing hours). We bonded over our shared love of dancing, books,
-        gaming, and food, and not too long after that, we made our
-        relationship official, and soon after began to compete together.
-      </paragraph>
+  <FlexRow class="ourstory">
+    <FlexColumn :md="12" :col="1" class="ourstory__titlearea">
+      <SectionTitle>Our Story</SectionTitle>
+    </FlexColumn>
+    <FlexColumn :md="12" :col="1" class="ourstory__paragraphs">
+      <Paragraph>
+        We met each other for the first time on the Purdue Latin &amp; Ballroom Dance Team.
+      </Paragraph>
+      <Paragraph>
+        We both were bright-eyed bushy-tailed newcomers, just desperately trying to stay on time to quickstep, when we
+        ran into each other (not literally) during practice, the day before Valentine's day.
+      </Paragraph>
+      <Paragraph>
+        Since we were both single at the time, we figured "Hey, no one will be using the practice space, let's practice
+        together!" Pedro suggested turning the practice into practice and a dinner, and to this day, April maintains she
+        didn't realize that it was meant to be a date.
+      </Paragraph>
+      <Paragraph>
+        That night, we went to 9 Irish Brothers in West Lafayette, and talked until closing time (quite a feat for a bar
+        known for late closing hours). We bonded over our shared love of dancing, books, gaming, and food, and not too
+        long after that, we made our relationship official, and soon after began to compete together.
+      </Paragraph>
 
       <div class="ourstory__paragraphs__image">
-        <img
-          class="ourstory__paragraphs__image"
-          :src="`${STATIC_URL}${picture3}`"
-          alt="Pedro proposing to April"
-        />
+        <img class="ourstory__paragraphs__image" :src="`${STATIC_URL}${picture3}`" alt="Pedro proposing to April" />
       </div>
-      <paragraph>
-        3 years later, Pedro hatched a scheme to propose to April at the
-        Purdue Ballroom Classic annual competition. He conspired with
-        Daniel and Yuehwern, the event coordinators and Latin coaches for
-        both him and April, along with all of their mutual friends, to
-        surprise her at the event, even flying her mother out in secret to
-        have her there for the moment.
-      </paragraph>
-      <paragraph>
-        Now April and Pedro are ready to take the next big step in their
-        life, and hope to spend the day celebrating with you!
-      </paragraph>
-    </flex-column>
-  </flex-row>
+      <Paragraph>
+        3 years later, Pedro hatched a scheme to propose to April at the Purdue Ballroom Classic annual competition. He
+        conspired with Daniel and Yuehwern, the event coordinators and Latin coaches for both him and April, along with
+        all of their mutual friends, to surprise her at the event, even flying her mother out in secret to have her
+        there for the moment.
+      </Paragraph>
+      <Paragraph>
+        Now April and Pedro are ready to take the next big step in their life, and hope to spend the day celebrating
+        with you!
+      </Paragraph>
+    </FlexColumn>
+  </FlexRow>
 </template>
 
 <script>
-import { FlexColumn, FlexRow } from "@IntusFacultas/layout";
-import { Paragraph, SectionTitle } from "@IntusFacultas/typography";
-import picture3 from "../assets/picture3.png";
+import { FlexColumn, FlexRow } from '@IntusFacultas/layout';
+import { Paragraph, SectionTitle } from '@IntusFacultas/typography';
+import picture3 from '../assets/picture3.png';
 
 export const OurStory = {
   components: {
@@ -75,9 +63,6 @@ export default OurStory;
 </script>
 
 <style>
-/* .ourstory {
-  margin: 5em 0em;
-} */
 .ourstory__titlearea {
   width: 50%;
   display: flex;
@@ -106,7 +91,7 @@ export default OurStory;
   }
 }
 .ourstory__paragraphs__image::after {
-  content: "Photo Credit: Ace Clyne & Devan Williams";
+  content: 'Photo Credit: Ace Clyne & Devan Williams';
   display: block;
   font-size: 12px;
   color: #444;

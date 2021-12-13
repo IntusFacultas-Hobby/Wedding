@@ -1,12 +1,6 @@
 <template>
   <div>
-    <svg
-      class="scrollindicator"
-      xmlns="http://www.w3.org/2000/svg"
-      width="47"
-      height="104"
-      viewBox="0 0 47 104"
-    >
+    <svg class="scrollindicator" xmlns="http://www.w3.org/2000/svg" width="47" height="104" viewBox="0 0 47 104">
       <g fill="none" stroke="#000" stroke-width="4">
         <rect
           x="2"
@@ -44,8 +38,9 @@
 </template>
 
 <script>
-import { Paragraph } from "@IntusFacultas/typography";
-import { Theme, TextTheme } from "@IntusFacultas/design-system";
+import { Paragraph } from '@IntusFacultas/typography';
+import { Theme, TextTheme } from '@IntusFacultas/design-system';
+
 export const ScrollIndicator = {
   components: {
     Paragraph,
@@ -60,7 +55,7 @@ export const ScrollIndicator = {
   props: {
     textFlavor: {
       type: String,
-      default: "Normal",
+      default: 'Normal',
     },
     theme: {
       type: Object,
@@ -70,7 +65,7 @@ export const ScrollIndicator = {
     },
     flavor: {
       type: String,
-      default: "Dark",
+      default: 'Dark',
     },
   },
 };

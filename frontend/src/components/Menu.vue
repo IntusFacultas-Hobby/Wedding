@@ -1,34 +1,26 @@
 <template>
   <div class="menusection">
-    <section-title id="menu" class="detailssection__title">Menu</section-title>
-    <flex-row>
+    <SectionTitle id="menu" class="detailssection__title">Menu</SectionTitle>
+    <FlexRow>
       <div :md="6" :sm="12" class="menusection__column">
-        <section-title>Passed Hors D'Oeuvres</section-title>
+        <SectionTitle>Passed Hors D'Oeuvres</SectionTitle>
         <div class="menusection__item">
           <div>
-            <category-title>Edamame Pot Sticker</category-title>
+            <CategoryTitle>Edamame Pot Sticker</CategoryTitle>
             <paragraph :size="14" class="menusection__subtext">with Spicy Soy</paragraph>
           </div>
           <img :src="`${STATIC_URL}${potsticker}`" alt class="menusection__item__img" />
         </div>
         <div class="menusection__item">
-          <img
-            :src="`${STATIC_URL}${chickensatay}`"
-            alt="image of chicken satay"
-            class="menusection__item__img"
-          />
+          <img :src="`${STATIC_URL}${chickensatay}`" alt="image of chicken satay" class="menusection__item__img" />
           <div>
-            <category-title>Chicken Satay</category-title>
+            <CategoryTitle>Chicken Satay</CategoryTitle>
             <paragraph :size="14" class="menusection__subtext">with Peanut Sauce</paragraph>
           </div>
         </div>
         <div class="menusection__item">
-          <category-title class>Teque&ntilde;os</category-title>
-          <img
-            :src="`${STATIC_URL}${tequeno}`"
-            alt="image of a tequeno"
-            class="menusection__item__img"
-          />
+          <CategoryTitle class>Teque&ntilde;os</CategoryTitle>
+          <img :src="`${STATIC_URL}${tequeno}`" alt="image of a tequeno" class="menusection__item__img" />
         </div>
         <div class="menusection__item">
           <img
@@ -37,14 +29,14 @@
             class="menusection__item__img"
           />
           <div>
-            <category-title>Spicy Tuna Tartar on Guacamole Toast</category-title>
+            <CategoryTitle>Spicy Tuna Tartar on Guacamole Toast</CategoryTitle>
             <paragraph class="menusection__subtext" :size="14">with Guasacaca</paragraph>
           </div>
         </div>
       </div>
       <div :md="6" :sm="12" class="menusection__column">
         <div class="menusection__station">
-          <section-title>Station I - Indonesian</section-title>
+          <SectionTitle>Station I - Indonesian</SectionTitle>
           <div class="menusection__item menusection__itemsection">
             <img
               :src="`${STATIC_URL}${rijsttafel}`"
@@ -52,23 +44,23 @@
               class="menusection__item__img"
             />
             <div class="menusection__item__content--block">
-              <category-title>Indonesian Rijsttafel</category-title>
-              <list class="menusection__subtext">
-                <list-item>Steamed Rice</list-item>
-                <list-item>Chili Paste</list-item>
-                <list-item>Cucumber, Green Bean and Tomato Salad</list-item>
-                <list-item>Sweet Indonesian Soy Sauce</list-item>
-                <list-item>Cabbage in Peanut Sauce</list-item>
-                <list-item>Curried Lentils</list-item>
-                <list-item>Chicken Curry</list-item>
-                <list-item>Toasted Coconut &amp; Ground Peanuts</list-item>
-                <list-item>Warm Nan Bread</list-item>
-              </list>
+              <CategoryTitle>Indonesian Rijsttafel</CategoryTitle>
+              <List class="menusection__subtext">
+                <ListItem>Steamed Rice</ListItem>
+                <ListItem>Chili Paste</ListItem>
+                <ListItem>Cucumber, Green Bean and Tomato Salad</ListItem>
+                <ListItem>Sweet Indonesian Soy Sauce</ListItem>
+                <ListItem>Cabbage in Peanut Sauce</ListItem>
+                <ListItem>Curried Lentils</ListItem>
+                <ListItem>Chicken Curry</ListItem>
+                <ListItem>Toasted Coconut &amp; Ground Peanuts</ListItem>
+                <ListItem>Warm Nan Bread</ListItem>
+              </List>
             </div>
           </div>
         </div>
         <div class="menusection__station">
-          <section-title>Station II - Chinese</section-title>
+          <SectionTitle>Station II - Chinese</SectionTitle>
           <div class="menusection__item menusection__itemsection">
             <img
               :src="`${STATIC_URL}${seafood}`"
@@ -76,22 +68,21 @@
               class="menusection__item__img firefox-fix"
             />
             <div class="menusection__item__content--block">
-              <category-title>
-                Chinese Seafood Dish served with towers of Cantonese Spinach
-                Salad
-              </category-title>
-              <list class="menusection__subtext">
-                <list-item>with Sprouts,</list-item>
-                <list-item>Water Chestnuts,</list-item>
-                <list-item>Hard Boiled Egg,</list-item>
-                <list-item>and Bacon*</list-item>
-              </list>
+              <CategoryTitle>
+                Chinese Seafood Dish served with towers of Cantonese Spinach Salad
+              </CategoryTitle>
+              <List class="menusection__subtext">
+                <ListItem>with Sprouts,</ListItem>
+                <ListItem>Water Chestnuts,</ListItem>
+                <ListItem>Hard Boiled Egg,</ListItem>
+                <ListItem>and Bacon*</ListItem>
+              </List>
               <paragraph class="menusection__subtext">* some without bacon for vegetarians</paragraph>
             </div>
           </div>
         </div>
         <div class="menusection__station">
-          <section-title>Station III - Latino</section-title>
+          <SectionTitle>Station III - Latino</SectionTitle>
           <div class="menusection__item menusection__itemsection">
             <img
               :src="`${STATIC_URL}${empanadas}`"
@@ -99,37 +90,35 @@
               class="menusection__item__img"
             />
             <div class="menusection__item__content--block">
-              <category-title>Carved Chimichurri Skirt Steak</category-title>
-              <list class="menusection__subtext">
-                <list-item>with Ripe Plantains,</list-item>
-                <list-item>Cheese Empanadas,</list-item>
-                <list-item>and Cilantro Mojo Grilled Assorted Vegetables</list-item>
-              </list>
+              <CategoryTitle>Carved Chimichurri Skirt Steak</CategoryTitle>
+              <List class="menusection__subtext">
+                <ListItem>with Ripe Plantains,</ListItem>
+                <ListItem>Cheese Empanadas,</ListItem>
+                <ListItem>and Cilantro Mojo Grilled Assorted Vegetables</ListItem>
+              </List>
             </div>
           </div>
         </div>
       </div>
-    </flex-row>
+    </FlexRow>
   </div>
 </template>
 
 <script>
 import {
-  Paragraph,
-  SectionTitle,
-  SubSectionTitle,
-  CategoryTitle,
-} from "@IntusFacultas/typography";
-import { FlexRow, FlexColumn } from "@IntusFacultas/layout";
-import { List, ListItem } from "@IntusFacultas/list";
+  Paragraph, SectionTitle, SubSectionTitle, CategoryTitle,
+} from '@IntusFacultas/typography';
+import { FlexRow, FlexColumn } from '@IntusFacultas/layout';
+import { List, ListItem } from '@IntusFacultas/list';
 // Images
-import chickensatay from "../assets/chicken-satay.jpg";
-import tequeno from "../assets/tequenos.png";
-import potsticker from "../assets/edamame_potstickers.jpg";
-import toast from "../assets/spicy-tuna-tartare-avocado-toast.jpg";
-import rijsttafel from "../assets/rijsttafel.jpeg";
-import seafood from "../assets/seafood-birds.jpg";
-import empanadas from "../assets/steak and empanadas.png";
+import chickensatay from '../assets/chicken-satay.jpg';
+import tequeno from '../assets/tequenos.png';
+import potsticker from '../assets/edamame_potstickers.jpg';
+import toast from '../assets/spicy-tuna-tartare-avocado-toast.jpg';
+import rijsttafel from '../assets/rijsttafel.jpeg';
+import seafood from '../assets/seafood-birds.jpg';
+import empanadas from '../assets/steak and empanadas.png';
+
 export const Menu = {
   data() {
     return {
@@ -184,12 +173,10 @@ export default Menu;
 .menusection__item__img {
   height: 200px;
   width: 151px;
-  /* margin: 0 0.5em; */
   clip-path: circle(42%);
 }
 .menusection__title {
   font-size: 1.8em;
-  /* margin: 1.5em 0em 0.5em 0; */
 }
 .menusection__subtext {
   font-style: italic;
@@ -203,8 +190,6 @@ ul.menusection__subtext li {
   padding-left: 0.5em;
 }
 .menusection__item {
-  /* margin: 0 auto;
-  margin-top: 1em; */
   display: flex;
   justify-content: space-around;
   width: 500px;

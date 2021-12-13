@@ -18,20 +18,20 @@ import {
   Paragraph,
   SectionTitle,
   SubSectionTitle,
-} from "@IntusFacultas/typography";
-import { FlexColumn, FlexRow } from "@IntusFacultas/layout";
-import VueRawTable from "@IntusFacultas/raw-table";
+} from '@IntusFacultas/typography';
+import { FlexColumn, FlexRow } from '@IntusFacultas/layout';
+import VueRawTable from '@IntusFacultas/raw-table';
 import {
   TableCarat,
   TableRow,
   TableHeader,
   TableCell,
-} from "@IntusFacultas/table";
-import camera from "../assets/camera.svg";
-import cocktail from "../assets/cocktail.svg";
-import wedding from "../assets/wedding.svg";
-import dinner from "../assets/dinner.svg";
-import Timeline from "../components/Timeline";
+} from '@IntusFacultas/table';
+import camera from '../assets/camera.svg';
+import cocktail from '../assets/cocktail.svg';
+import wedding from '../assets/wedding.svg';
+import dinner from '../assets/dinner.svg';
+import Timeline from './Timeline';
 
 export const Schedule = {
   data() {

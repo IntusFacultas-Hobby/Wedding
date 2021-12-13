@@ -6,10 +6,7 @@
         April
         <span class="backgroundimage__ampersand">&amp;</span> Pedro
       </page-title>
-      <paragraph
-        class="backgroundimage__subtext"
-        flavor="White"
-      >June 12th, 2021 &bull; Cincinnati, Ohio</paragraph>
+      <paragraph class="backgroundimage__subtext" flavor="White">June 11th, 2022 &bull; Cincinnati, Ohio</paragraph>
       <ScrollIndicator
         class="backgroundimage__scrollindicator"
         flavor="White"
@@ -44,8 +41,8 @@
           <a href="#weddingparty">Wedding Party</a>
         </li>
       </ul>
-      <Travel></Travel>
-      <Accomodation class="accomodation"></Accomodation>
+      <Travel />
+      <Accomodation class="accomodation" />
     </content-section>
     <background-image :img="picture4" height="80vh" :positioning="picture4Formatting"></background-image>
     <content-section>
@@ -66,90 +63,29 @@
 </template>
 
 <script>
-import styled from "vue-styled-components";
-import "../assets/fonts/fonts.css";
+import { css } from 'vue-styled-components';
+import '../assets/fonts/fonts.css';
 // content
-import Navbar from "../components/Navbar";
-import ScrollIndicator from "../components/ScrollIndicator";
-import picture1 from "../assets/picture1.png";
-import picture2 from "../assets/picture2.png";
-import picture4 from "../assets/picture4.jpg";
-import picture5 from "../assets/picture5.jpg";
-import picture6 from "../assets/picture6.jpg";
-import OurStory from "../components/OurStory";
-import Travel from "../components/Travel";
-import Accomodation from "../components/Accomodation";
-import Schedule from "../components/Schedule";
-import Menu from "../components/Menu";
-import DressCode from "../components/DressCode";
-import WeddingParty from "../components/WeddingParty";
-import CopyrightFooter from "../components/CopyrightFooter";
+import { PageTitle, Paragraph } from '@IntusFacultas/typography';
+import Navbar from '../components/Navbar.vue';
+import ScrollIndicator from '../components/ScrollIndicator.vue';
+import picture1 from '../assets/picture1.png';
+import picture2 from '../assets/picture2.png';
+import picture4 from '../assets/picture4.jpg';
+import picture5 from '../assets/picture5.jpg';
+import picture6 from '../assets/picture6.jpg';
+import OurStory from '../components/OurStory.vue';
+import Travel from '../components/Travel.vue';
+import Accomodation from '../components/Accomodation.vue';
+import Schedule from '../components/Schedule.vue';
+import Menu from '../components/Menu.vue';
+import DressCode from '../components/DressCode.vue';
+import WeddingParty from '../components/WeddingParty.vue';
+import CopyrightFooter from '../components/CopyrightFooter.vue';
 
-import { PageTitle, Paragraph } from "@IntusFacultas/typography";
-import VSWoff from "../assets/VladimirScript.woff";
-import VSWoff2 from "../assets/VladimirScript.woff2";
-import { THEME } from "../configuration";
-import Background from "../assets/Wedding Background Optimized.svg";
-const props = {
-  img: String,
-  height: String,
-  positioning: String,
-};
-const BackgroundImage = styled("div", props)`
-  background-image: url("${process.env.VUE_APP_STATIC_URL}${(props) =>
-    props.img}");
-  height: ${(props) => props.height};
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  ${(props) => props.positioning}
-  position:relative;
-  background-color: #444;
-  display: flex;
-  padding: 0 1em;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  @font-face {
-    font-family: "Vladimir Script";
-    src: url("${process.env.VUE_APP_STATIC_URL}${VSWoff}") format("woff2"),
-      url("${process.env.VUE_APP_STATIC_URL}${VSWoff2}") format("woff");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
-`;
-const ContentSection = styled.div`
-  &::before {
-    background: linear-gradient(
-        to top,
-        rgba(255, 255, 255, 0) -65%,
-        rgba(255, 255, 255, 1)
-      ),
-      url("${process.env.VUE_APP_STATIC_URL}${Background}");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -2;
-    opacity: 0.1;
-  }
+import { BackgroundImage, ContentSection } from './MainPage/StyledMainPage';
+import { THEME } from '../configuration';
 
-  position: relative;
-  padding: 3em 0em;
-  @media screen and (max-width: 450px) {
-    text-align: center;
-    & * {
-      text-align: center;
-    }
-  }
-`;
 export const MainPage = {
   components: {
     Navbar,
@@ -171,7 +107,7 @@ export const MainPage = {
     return {
       theme: THEME,
       picture1,
-      picture1Formatting: `
+      picture1Formatting: css`
         background-position: center center;
         @media screen and (min-width: 1700px) {
           background-position: center -200px;
@@ -186,40 +122,39 @@ export const MainPage = {
           background-position: center -310px;
         }
         @media screen and (max-width: 450px) {
-            background-position: 40% center;
-            background-attachment: scroll;
+          background-position: 40% center;
+          background-attachment: scroll;
         }
       `,
       picture2,
-      picture2Formatting: `
-        background-position:center -165px;
+      picture2Formatting: css`
+        background-position: center -165px;
         @media screen and (min-width: 2030px) {
-            background-position:center -380px;
+          background-position: center -380px;
         }
-        @media screen and (max-width: 800px ) {
+        @media screen and (max-width: 800px) {
           background-position: 40% -165px;
         }
-        @media screen and (max-width: 670px ) {
+        @media screen and (max-width: 670px) {
           background-position: 30% -165px;
         }
         @media screen and (max-width: 450px) {
-            background-position: 40% center;
-            background-attachment: scroll;
+          background-position: 40% center;
+          background-attachment: scroll;
         }
       `,
       picture4,
-      picture4Formatting: `
+      picture4Formatting: css`
         @media screen and (max-width: 450px) {
           background-position: 5% center;
           background-attachment: scroll;
         }
       `,
       picture5,
-      picture5Formatting: `
+      picture5Formatting: css`
         background-position: center -260px;
-        @media screen and (max-width: 450px) {
-          background-position: center center;
-          background-attachment: scroll;
+        @media screen and (max-width: 500px) {
+          background-position: center 0px;
         }
         @media screen and (max-height: 450px) {
           background-position: center -160px;
@@ -227,7 +162,7 @@ export const MainPage = {
         }
       `,
       picture6,
-      picture6Formatting: `
+      picture6Formatting: css`
         @media screen and (max-width: 450px) {
           background-position: 30% center;
           background-attachment: scroll;
@@ -252,7 +187,7 @@ export default MainPage;
 }
 
 .backgroundimage__ampersand {
-  font-family: "Vladimir Script" !important;
+  font-family: 'Vladimir Script' !important;
   font-size: 140px;
 }
 .backgroundimage__subtext {
@@ -319,7 +254,7 @@ export default MainPage;
 }
 .detailsnavigation li:after {
   transition: all 0.25s;
-  content: "";
+  content: '';
   display: block;
   margin: 0 auto;
   width: 0%;
@@ -329,7 +264,7 @@ export default MainPage;
 
 .detailsnavigation li:hover::after {
   transition: all 0.25s;
-  content: "";
+  content: '';
   display: block;
   margin: 0 auto;
   width: 100%;

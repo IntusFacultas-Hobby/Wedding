@@ -1,24 +1,24 @@
 <template>
-  <flex-row>
-    <flex-column :md="12" :col="6" class="accomodation__mapcontainer">
+  <FlexRow>
+    <FlexColumn :md="12" :col="6" class="accomodation__mapcontainer">
       <div v-if="show" v-html="hotel.map"></div>
       <div class="maploading" v-else></div>
-    </flex-column>
-    <flex-column :md="12" :col="6" class="accomodation__details">
-      <category-title class="accomodation__hoteltitle">{{hotel.title}}</category-title>
-      <paragraph class="accomodation__hotel">
-        <text-content :bold="true">Address:</text-content>
-        {{hotel.address}}
-      </paragraph>
-      <paragraph>
-        <text-content :bold="true">Distance to Carnegie Center:</text-content>
-        {{hotel.distanceToEvent}} miles
-      </paragraph>
-      <paragraph>
-        <text-content :bold="true">Distance to Pedro's Family:</text-content>
-        {{hotel.distanceToFamily}} miles
-      </paragraph>
-      <paragraph class="accomodation__stars">
+    </FlexColumn>
+    <FlexColumn :md="12" :col="6" class="accomodation__details">
+      <CategoryTitle class="accomodation__hoteltitle">{{ hotel.title }}</CategoryTitle>
+      <Paragraph class="accomodation__hotel">
+        <TextContent :bold="true">Address:</TextContent>
+        {{ hotel.address }}
+      </Paragraph>
+      <Paragraph>
+        <TextContent :bold="true">Distance to Carnegie Center:</TextContent>
+        {{ hotel.distanceToEvent }} miles
+      </Paragraph>
+      <Paragraph>
+        <TextContent :bold="true">Distance to Pedro's Family:</TextContent>
+        {{ hotel.distanceToFamily }} miles
+      </Paragraph>
+      <Paragraph class="accomodation__stars">
         <svg
           class="accomodation__stars__star"
           v-for="n in hotel.stars"
@@ -36,27 +36,30 @@
           <rect fill="none" height="50" width="50" />
           <polygon
             fill="gold"
-            points="25,3.553 30.695,18.321 46.5,19.173   34.214,29.152 38.287,44.447 25,35.848 11.712,44.447 15.786,29.152 3.5,19.173 19.305,18.321 "
+            points="25,3.553 30.695,18.321 46.5,19.173 34.214,29.152 38.287,44.447 25,35.848 11.712,44.447 15.786,29.152 3.5,19.173 19.305,18.321 "
             stroke="gold"
             stroke-miterlimit="10"
             stroke-width="2"
           />
         </svg>
-      </paragraph>
-    </flex-column>
-  </flex-row>
+      </Paragraph>
+    </FlexColumn>
+  </FlexRow>
 </template>
 
 <script>
-import { FlexColumn, FlexRow } from "@IntusFacultas/layout";
+import { FlexColumn, FlexRow } from '@IntusFacultas/layout';
 
-import {
-  CategoryTitle,
-  Paragraph,
-  TextContent,
-} from "@IntusFacultas/typography";
+import { CategoryTitle, Paragraph, TextContent } from '@IntusFacultas/typography';
+
 export const Hotel = {
-  components: { CategoryTitle, Paragraph, TextContent, FlexColumn, FlexRow },
+  components: {
+    CategoryTitle,
+    Paragraph,
+    TextContent,
+    FlexColumn,
+    FlexRow,
+  },
   data() {
     return {
       show: false,
@@ -127,7 +130,7 @@ export default Hotel;
   align-items: center;
   text-align: center;
   vertical-align: middle;
-  content: "Loading";
+  content: 'Loading';
   font-size: 24px;
 }
 </style>

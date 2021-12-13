@@ -52,8 +52,9 @@
 </template>
 
 <script>
-import { WebLink, Paragraph, SectionTitle } from "@IntusFacultas/typography";
-import { FlexColumn, FlexRow } from "@IntusFacultas/layout";
+import { WebLink, Paragraph, SectionTitle } from '@IntusFacultas/typography';
+import { FlexColumn, FlexRow } from '@IntusFacultas/layout';
+
 export const Travel = {
   components: {
     WebLink,

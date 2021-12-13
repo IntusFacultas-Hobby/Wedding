@@ -9,8 +9,9 @@
 </template>
 
 <script>
-  import styled from 'vue-styled-components';
-  const WarningContainer = styled.div`
+import styled from 'vue-styled-components';
+
+const WarningContainer = styled.div`
     position: fixed;
     top: 0;
     bottom: 0;
@@ -22,12 +23,12 @@
     align-items: center;
     justify-content: center;
   `;
-  const DelayedAnnouncement = styled("p")`
+const DelayedAnnouncement = styled('p')`
   font-family: "Montserrat";
   color: #444;
   font-size: 20px;
 `;
-  const DelayedSign = styled.div`
+const DelayedSign = styled.div`
     padding: 2em;
     box-shadow: 0px 2px 2px rgba(0,0,0, 0.2);
     background-color: white;
@@ -36,8 +37,8 @@
     z-index: 3;
     max-width: 350px;
     text-align: center;
-  `
-  const WarningTape = styled.div`
+  `;
+const WarningTape = styled.div`
     height: 30px;
     color: white;
     padding: 5px;
@@ -61,13 +62,13 @@
       transform: rotate(-.10turn);
       transform-origin: center center;
     }
-  `
-  export const Delayed = {
+  `;
+export const Delayed = {
   components: {
     WarningTape,
     WarningContainer,
     DelayedAnnouncement,
-    DelayedSign
+    DelayedSign,
   },
   data() {
     return {

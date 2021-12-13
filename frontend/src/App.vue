@@ -1,20 +1,21 @@
 <template>
   <theme-provider id="app" :theme="theme">
-    <LandingPage />
-    <Delayed />
-    <!-- <MainPage></MainPage> -->
+    <!-- <LandingPage />
+    <Delayed /> -->
+    <MainPage></MainPage>
   </theme-provider>
 </template>
 
 <script>
-import LandingPage from "./views/LandingPage";
-import Delayed from "./components/Delayed";
-// import MainPage from "./views/MainPage";
+// import LandingPage from "./views/LandingPage";
+// import Delayed from "./components/Delayed";
+import { ThemeProvider } from 'vue-styled-components';
+import MainPage from './views/MainPage';
 
-import { ThemeProvider } from "vue-styled-components";
-import { THEME } from "./configuration";
+import { THEME } from './configuration';
+
 export default {
-  name: "App",
+  name: 'App',
   data() {
     return {
       theme: THEME,
@@ -22,9 +23,9 @@ export default {
   },
   mounted() {},
   components: {
-    // MainPage,
-    Delayed,
-    LandingPage,
+    MainPage,
+    // Delayed,
+    // LandingPage,
     ThemeProvider,
   },
 };

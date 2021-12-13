@@ -22,29 +22,29 @@
 </template>
 
 <script>
-import styled from "vue-styled-components";
-import NCard from "@IntusFacultas/card";
-import background from "../assets/Wedding Background Optimized.svg";
-import Logo from "../assets/Wedding Logo.svg";
-import { PageTitle, WebLink, SmallText } from "@IntusFacultas/typography";
+import styled from 'vue-styled-components';
+import NCard from '@IntusFacultas/card';
+import { PageTitle, WebLink, SmallText } from '@IntusFacultas/typography';
+import background from '../assets/Wedding Background Optimized.svg';
+import Logo from '../assets/Wedding Logo.svg';
+
 const props = {
   svg: String,
 };
-const CustomAnnouncement = styled("p")`
+const CustomAnnouncement = styled('p')`
   font-family: "Montserrat";
   color: #444;
   // margin-block-start: 16px;
   // margin-block-end: 0;
   font-size: 20px;
 `;
-const LandingPageBackground = styled("div", props)`
+const LandingPageBackground = styled('div', props)`
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   text-align: center;
-  background-image: url("${process.env.VUE_APP_STATIC_URL}${(props) =>
-    props.svg}");
+  background-image: url("${process.env.VUE_APP_STATIC_URL}${(props) => props.svg}");
   background-size: 3000px;
   background-position: center;
   background-repeat: repeat;
