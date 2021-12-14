@@ -11,6 +11,6 @@ else
     aws s3 cp app.js.gz s3://april-and-pedro-wedding/$1/js/app.js.gz --acl public-read --content-type "application/javascript" --content-encoding "gzip"
     aws s3 cp vendor.js.gz s3://april-and-pedro-wedding/$1/js/vendor.js.gz --acl public-read --content-type "application/javascript" --content-encoding "gzip"
     cd ../img
-    aws s3 sync . s3://april-and-pedro-wedding/static/img --acl public-read
+    aws s3 sync . s3://april-and-pedro-wedding/$1/img --acl public-read
     popd
 fi
