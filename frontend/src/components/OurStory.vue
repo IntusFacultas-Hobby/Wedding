@@ -42,7 +42,7 @@
 <script>
 import { FlexColumn, FlexRow } from '@IntusFacultas/layout';
 import { Paragraph, SectionTitle } from '@IntusFacultas/typography';
-import picture3 from '../assets/picture3.png';
+import picture3 from '../assets/picture3.webp';
 
 export const OurStory = {
   components: {

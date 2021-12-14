@@ -123,10 +123,10 @@
 <script>
 import { SectionTitle, SubSectionTitle, Paragraph } from '@IntusFacultas/typography';
 import { FlexRow, FlexColumn } from '@IntusFacultas/layout';
-import adithya from '../assets/adithya.jpg';
-import katie from '../assets/katie.png';
-import nathan from '../assets/nathan.jpg';
-import dasha from '../assets/dasha.jpg';
+import adithya from '../assets/adithya.webp';
+import katie from '../assets/katie.webp';
+import nathan from '../assets/nathan.webp';
+import dasha from '../assets/dasha.webp';
 import luis from '../assets/luis.jpg';
 import dpg from '../assets/dpg.jpg';
 
