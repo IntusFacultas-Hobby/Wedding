@@ -128,7 +128,7 @@ import katie from '../assets/katie.webp';
 import nathan from '../assets/nathan.webp';
 import dasha from '../assets/dasha.webp';
 import luis from '../assets/luis.jpg';
-import dpg from '../assets/dpg.jpg';
+import dpg from '../assets/dpg.webp';
 
 export const WeddingParty = {
   data() {
@@ -168,6 +168,7 @@ export default WeddingParty;
   flex-direction: row;
   flex-wrap: wrap;
   margin: 0.5em 0;
+  justify-content: center;
 }
 .weddingparty__container__item__image {
   height: 300px;

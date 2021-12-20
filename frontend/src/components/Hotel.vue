@@ -2,7 +2,7 @@
   <FlexRow>
     <FlexColumn :md="12" :col="6" class="accomodation__mapcontainer">
       <iframe v-if="show" :src="hotel.src" v-bind="iframeProps" />
-      <div class="maploading" v-else></div>
+      <IFrameImage :src="hotel.img" :alt="hotel.title" v-else @click="$emit('click')" />
     </FlexColumn>
     <FlexColumn :md="12" :col="6" class="accomodation__details">
       <CategoryTitle class="accomodation__hoteltitle">{{ hotel.title }}</CategoryTitle>
@@ -51,11 +51,10 @@
 
 <script>
 import { FlexColumn, FlexRow } from '@IntusFacultas/layout';
-
 import { CategoryTitle, Paragraph, TextContent } from '@IntusFacultas/typography';
+import { IFRAME_WIDTH, IFRAME_HEIGHT } from './Hotel/StyledIFrameImage';
+import IFrameImage from './Hotel/IFrameImage.vue';
 
-const IFRAME_WIDTH = 400;
-const IFRAME_HEIGHT = 300;
 const iframeProps = {
   class: 'detailssection__map',
   width: IFRAME_WIDTH,
@@ -73,20 +72,16 @@ export const Hotel = {
     TextContent,
     FlexColumn,
     FlexRow,
+    IFrameImage,
   },
   data() {
     return {
-      show: false,
       iframeProps,
     };
   },
-  mounted() {
-    setTimeout(() => {
-      this.show = true;
-    }, 1000);
-  },
   props: {
     hotel: Object,
+    show: Boolean,
   },
 };
 export default Hotel;

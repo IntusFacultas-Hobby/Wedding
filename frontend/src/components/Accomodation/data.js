@@ -1,5 +1,19 @@
 /* eslint-disable max-len */
 
+import hiltonNetherland from '../../assets/hilton-netherland.webp';
+import hiltonMidtown from '../../assets/hilton-midtown.webp';
+import residenceInn from '../../assets/residence-inn.webp';
+import theSummit from '../../assets/the-summit.webp';
+import holidayInn from '../../assets/holiday-inn.webp';
+import springhillSuites from '../../assets/springhill-suites.webp';
+import theWestin from '../../assets/the-westin.webp';
+import wingate from '../../assets/wingate.webp';
+import home2 from '../../assets/home2.webp';
+import hiltonNortheast from '../../assets/hilton-northeast.webp';
+import hiltonMason from '../../assets/hilton-mason.webp';
+import marriotNortheast from '../../assets/marriot-northeast.webp';
+import embassySuites from '../../assets/embassy-suites.webp';
+
 export const hotelsNearEvent = [
   {
     src:
@@ -9,6 +23,7 @@ export const hotelsNearEvent = [
     address: '35 W 5th St, Cincinnati, OH 45202',
     distanceToEvent: 2.6,
     distanceToFamily: 21.9,
+    img: hiltonNetherland,
   },
   {
     src:
@@ -18,6 +33,7 @@ export const hotelsNearEvent = [
     address: '2145 Dana Ave, Cincinnati, OH 45207',
     distanceToEvent: 2.6,
     distanceToFamily: 16.6,
+    img: hiltonMidtown,
   },
   {
     src:
@@ -27,6 +43,7 @@ export const hotelsNearEvent = [
     address: '3815 Edwards Rd, Cincinnati, OH 45209',
     distanceToEvent: 2.6,
     distanceToFamily: 15.9,
+    img: residenceInn,
   },
   {
     src:
@@ -36,6 +53,7 @@ export const hotelsNearEvent = [
     address: '5345 Medpace Way, Cincinnati, OH 45227',
     distanceToEvent: 3.7,
     distanceToFamily: 13.6,
+    img: theSummit,
   },
   {
     src:
@@ -45,6 +63,7 @@ export const hotelsNearEvent = [
     address: '5311 Hetzell St, Cincinnati, OH 45227',
     distanceToEvent: 3.6,
     distanceToFamily: 13.6,
+    img: holidayInn,
   },
   {
     src:
@@ -54,6 +73,7 @@ export const hotelsNearEvent = [
     address: '610 Eden Park Dr, Cincinnati, OH 45202',
     distanceToEvent: 3.4,
     distanceToFamily: 20.5,
+    img: springhillSuites,
   },
   {
     src:
@@ -63,6 +83,7 @@ export const hotelsNearEvent = [
     address: '21 E 5th St, Cincinnati, OH 45202',
     distanceToEvent: 4.2,
     distanceToFamily: 21.7,
+    img: theWestin,
   },
 ];
 
@@ -75,6 +96,7 @@ export const hotelsNearFamily = [
     address: '4320 Glendale Milford Rd, Cincinnati, OH 45242',
     distanceToEvent: 13.5,
     distanceToFamily: 5.2,
+    img: wingate,
   },
   {
     src:
@@ -84,6 +106,7 @@ export const hotelsNearFamily = [
     address: '11235 Cornell Park Dr, Blue Ash, OH 45242',
     distanceToEvent: 14.3,
     distanceToFamily: 7.1,
+    img: home2,
   },
   {
     src:
@@ -93,6 +116,7 @@ export const hotelsNearFamily = [
     address: '6288 Tri Ridge Blvd, Loveland, OH 45140',
     distanceToEvent: 19.1,
     distanceToFamily: 3.3,
+    img: hiltonNortheast,
   },
   {
     src:
@@ -102,6 +126,7 @@ export const hotelsNearFamily = [
     address: '5200 Natorp Blvd, Mason, OH 45040',
     distanceToEvent: 17.3,
     distanceToFamily: 7.5,
+    img: hiltonMason,
   },
   {
     src:
@@ -111,6 +136,7 @@ export const hotelsNearFamily = [
     address: '9664 S Mason Montgomery Rd, Mason, OH 45040',
     distanceToEvent: 17,
     distanceToFamily: 7.2,
+    img: marriotNortheast,
   },
   {
     src:
@@ -120,5 +146,6 @@ export const hotelsNearFamily = [
     address: '4554 Lake Forest Dr, Blue Ash, OH 45242',
     distanceToEvent: 13.3,
     distanceToFamily: 5.1,
+    img: embassySuites,
   },
 ];

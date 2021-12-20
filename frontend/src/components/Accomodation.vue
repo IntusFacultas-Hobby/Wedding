@@ -46,6 +46,8 @@
         v-for="(hotel, index) in sortedHotelsNearEvent"
         :key="`event-${index}`"
         :hotel="hotel"
+        :show="currentlyToggled === index"
+        @click="currentlyToggled = index"
       ></Hotel>
     </div>
     <SubSectionTitle id="accomodationNearPedro" class="accomodation__subtitle accomodation__subtitle--second">
@@ -109,6 +111,7 @@ export const Accomodation = {
       ],
       hotelsNearEvent,
       hotelsNearFamily,
+      currentlyToggled: null,
     };
   },
   computed: {
