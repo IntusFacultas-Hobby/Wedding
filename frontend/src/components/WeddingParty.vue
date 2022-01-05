@@ -127,7 +127,7 @@ import adithya from '../assets/adithya.webp';
 import katie from '../assets/katie.webp';
 import nathan from '../assets/nathan.webp';
 import dasha from '../assets/dasha.webp';
-import luis from '../assets/luis.jpg';
+import luis from '../assets/luis.webp';
 import dpg from '../assets/dpg.webp';
 
 export const WeddingParty = {
