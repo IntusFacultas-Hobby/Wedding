@@ -23,12 +23,6 @@
     <content-section>
       <ul class="detailsnavigation">
         <li>
-          <a href="#travel">Travel</a>
-        </li>
-        <li>
-          <a href="#accomodation">Accomodation</a>
-        </li>
-        <li>
           <a href="#schedule">Schedule</a>
         </li>
         <li>
@@ -40,23 +34,29 @@
         <li>
           <a href="#weddingparty">Wedding Party</a>
         </li>
+        <li>
+          <a href="#travel">Travel</a>
+        </li>
+        <li>
+          <a href="#accomodation">Accomodation</a>
+        </li>
       </ul>
-      <Travel />
-      <Accomodation class="accomodation" />
+      <Schedule class="schedule"></Schedule>
     </content-section>
     <background-image :img="picture4" height="80vh" :positioning="picture4Formatting"></background-image>
     <content-section>
-      <Schedule class="schedule"></Schedule>
-    </content-section>
-    <background-image :img="picture5" height="80vh" :positioning="picture5Formatting"></background-image>
-    <content-section>
       <Menu class="menu"></Menu>
     </content-section>
-    <background-image :img="picture6" height="80vh" :positioning="picture6Formatting"></background-image>
+    <background-image :img="picture5" height="80vh" :positioning="picture5Formatting"></background-image>
     <content-section>
       <DressCode class="dresscode"></DressCode>
       <hr />
       <WeddingParty class="weddingparty"></WeddingParty>
+    </content-section>
+    <background-image :img="picture6" height="80vh" :positioning="picture6Formatting"></background-image>
+    <content-section>
+      <Travel />
+      <Accomodation class="accomodation" />
     </content-section>
     <CopyrightFooter></CopyrightFooter>
   </main>

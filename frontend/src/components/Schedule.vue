@@ -1,7 +1,6 @@
 <template>
   <div class="detailssection travellsection">
     <SectionTitle id="schedule" class="detailssection__title">Schedule</SectionTitle>
-    <Paragraph>(Still not finalized, be sure to check back!)</Paragraph>
     <Timeline width="1200px" :items="items"></Timeline>
   </div>
 </template>
@@ -20,6 +19,7 @@ import camera from '../assets/camera.svg';
 import cocktail from '../assets/cocktail.svg';
 import wedding from '../assets/wedding.svg';
 import dinner from '../assets/dinner.svg';
+import dance from '../assets/dance.svg';
 import Timeline from './Timeline.vue';
 
 export const Schedule = {
@@ -31,26 +31,10 @@ export const Schedule = {
       dinner,
       items: [
         {
-          backgroundColor: '#F3EAF4',
-          logoColor: '#da8fe3',
-          content: `
-                <h3 class="travelsection__timelinesection__header">4:00 PM - 4:30 PM</h3>
-                <p>First Look <span class="fancyampersand">&</span> Photos</p>
-              `,
-          circleCustomization: css`
-            background-image: url(${process.env.VUE_APP_STATIC_URL}${camera});
-            background-size: 22px 25px;
-            height: 32px;
-            width: 32px;
-            background-position: center 2px;
-            background-repeat: no-repeat;
-          `,
-        },
-        {
           backgroundColor: '#EADDE1',
           logoColor: '#e37093',
           content: `
-                <h3 class="travelsection__timelinesection__header">4:30 PM - 4:40 PM</h3>
+                <h3 class="travelsection__timelinesection__header">4:30 PM</h3>
                 <p>Ceremony</p>
                 <p>
                   Our ceremony will be secular and brief, so we have as much time to celebrate with everyone as
@@ -70,7 +54,7 @@ export const Schedule = {
           backgroundColor: '#E5CEDC',
           logoColor: '#db7fb7',
           content: `
-                <h3 class="travelsection__timelinesection__header">4:40 PM - 6:00 PM</h3>
+                <h3 class="travelsection__timelinesection__header">5:00 PM - 6:00 PM</h3>
                 <p>
                   Cocktails
                   <span class="fancyampersand">&</span> Dinner Setup
@@ -78,7 +62,7 @@ export const Schedule = {
                 <p>
                   At this time we will change rooms so that our hosts can set up the hall for dinner.
                 </p>
-                <p>
+                <p> 
                   We will be trying to get photos with everyone at this time so that everyone has time to eat.
                 </p>
               `,
@@ -95,11 +79,31 @@ export const Schedule = {
           backgroundColor: '#8F9491',
           logoColor: '#779e87',
           content: `
-                <h3 class="travelsection__timelinesection__header">6:15 PM - 10:00 PM</h3>
-                <p>Dinner and Party!</p>
+                <h3 class="travelsection__timelinesection__header">6:00 PM - 7:30 PM</h3>
+                <p>Dinner & First Dance</p>
+                <p>
+                  Toasts and welcomes will be given at this time.
+                </p>
             `,
           circleCustomization: css`
             background-image: url(${process.env.VUE_APP_STATIC_URL}${dinner});
+            background-size: 32px 32px;
+            height: 32px;
+            width: 32px;
+            background-position: 0px 0px;
+            background-repeat: no-repeat;
+          `,
+        },
+        {
+          backgroundColor: '#d3c1ed',
+          logoColor: '#777b9e',
+          content: `
+                <h3 class="travelsection__timelinesection__header">7:30 PM - 10:00 PM</h3>
+                <p>Party!</p>
+                <p>Get your happy feet going!</p>
+            `,
+          circleCustomization: css`
+            background-image: url(${process.env.VUE_APP_STATIC_URL}${dance});
             background-size: 32px 32px;
             height: 32px;
             width: 32px;
