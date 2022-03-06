@@ -1,6 +1,6 @@
 <template>
   <div class="detailssection">
-    <SectionTitle id="accomodation" class="detailssection__title">Accomodation</SectionTitle>
+    <SectionTitle id="accomodation" class="detailssection__title">Accommodation</SectionTitle>
     <ul class="detailsnavigation accomodation__navigation">
       <li>
         <a href="#accomodationNearCarnegie">Near the Carnegie Center</a>

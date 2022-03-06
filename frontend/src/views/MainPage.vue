@@ -38,7 +38,7 @@
           <a href="#travel">Travel</a>
         </li>
         <li>
-          <a href="#accomodation">Accomodation</a>
+          <a href="#accomodation">Accommodation</a>
         </li>
       </ul>
       <Schedule class="schedule"></Schedule>
