@@ -40,6 +40,9 @@
         <li>
           <a href="#accomodation">Accommodation</a>
         </li>
+        <li>
+            <a href="https://www.zola.com/registry/pedroandapril2022" target="_blank">Registry</a>
+        </li>
       </ul>
       <Schedule class="schedule"></Schedule>
     </content-section>
