@@ -293,7 +293,7 @@ export default MainPage;
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
-  padding: 2em 0;
+  padding: 2em 1em;
 }
 .detailssection__title {
   font-size: 35px;
