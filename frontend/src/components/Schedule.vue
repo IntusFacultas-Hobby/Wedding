@@ -1,19 +1,42 @@
 <template>
   <div class="detailssection travellsection">
-    <SectionTitle id="schedule" class="detailssection__title">Schedule</SectionTitle>
+    <SectionTitle id="schedule" class="detailssection__title"
+      >Schedule</SectionTitle
+    >
     <Timeline width="1200px" :items="items"></Timeline>
+    <Padder>
+      <SectionTitle id="registry" class="detailssection__title"
+        >Registry</SectionTitle
+      >
+      <Paragraph bold>
+        Your love and well-wishes are gift enough, but if you do wish to gift us
+        something, our registry is with Zola!
+      </Paragraph>
+      <RegistryButton
+        href="https://www.zola.com/registry/pedroandapril2022"
+        target="_blank"
+      >
+        See our registry</RegistryButton
+      >
+    </Padder>
   </div>
 </template>
 
 <script>
-import { css } from 'vue-styled-components';
+import styled, { css } from 'vue-styled-components';
 import {
-  WebLink, Paragraph, SectionTitle, SubSectionTitle,
+  WebLink,
+  Paragraph,
+  SectionTitle,
+  SubSectionTitle,
 } from '@IntusFacultas/typography';
 import { FlexColumn, FlexRow } from '@IntusFacultas/layout';
 import VueRawTable from '@IntusFacultas/raw-table';
 import {
-  TableCarat, TableRow, TableHeader, TableCell,
+  TableCarat,
+  TableRow,
+  TableHeader,
+  TableCell,
 } from '@IntusFacultas/table';
 import camera from '../assets/camera.svg';
 import cocktail from '../assets/cocktail.svg';
@@ -21,6 +44,30 @@ import wedding from '../assets/wedding.svg';
 import dinner from '../assets/dinner.svg';
 import dance from '../assets/dance.svg';
 import Timeline from './Timeline.vue';
+
+const Padder = styled.div`
+  margin-top: 3em;
+`;
+
+const RegistryButton = styled.a`
+  border: 1px solid #e7a6c2;
+  padding: 1em;
+  display: block;
+  max-width: 50%;
+  text-decoration: none;
+  color: black;
+  margin: 0 auto;
+  font-weight: bold;
+  margin-top: 1em;
+  border-radius: 5px;
+  transition: color 0.15s ease-out, background-color 0.15s ease-out;
+  &:visited {
+    color: black;
+  }
+  &:hover {
+    background-color: #e7a6c2;
+  }
+`;
 
 export const Schedule = {
   data() {
@@ -127,6 +174,8 @@ export const Schedule = {
     TableHeader,
     TableCell,
     SubSectionTitle,
+    Padder,
+    RegistryButton,
   },
 };
 export default Schedule;
@@ -159,7 +208,7 @@ export default Schedule;
   padding: 1.5em;
 }
 .fancyampersand {
-  font-family: 'Vladimir Script' !important;
+  font-family: "Vladimir Script" !important;
   font-size: 26px;
 }
 .travelsection__timelinesection__paragraph {
